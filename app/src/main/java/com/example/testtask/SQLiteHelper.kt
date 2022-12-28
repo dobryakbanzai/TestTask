@@ -60,8 +60,6 @@ class SQLiteHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
                                 + BANK_SITE + " TEXT, "
                                 + BANK_PHONE + " TEXT " + ")")
 
-        println(createTblHistory)
-
         db?.execSQL(createTblHistory)
 
 
@@ -76,7 +74,7 @@ class SQLiteHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
         val db = this.writableDatabase
 
         val contentValues = ContentValues()
-        contentValues.put(ID, rm.id)
+
         contentValues.put(BINNUM, rm.binnum)
         contentValues.put(NUMBER_LEN, rm.number_len)
         contentValues.put(NUMBER_LUN, rm.number_lun)

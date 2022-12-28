@@ -4,9 +4,9 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 data class RequestModel(
-    var id: Int = getAutoId(),
-
+    var id: Int = 0,
     var binnum: String = "",
+
 
     var number_len: String = "",
     var number_lun: String = "",
@@ -31,12 +31,6 @@ data class RequestModel(
 
 
 ){
-    companion object{
-        fun getAutoId(): Int{
-            val random = Random()
-            return random.nextInt(10000)
-        }
-    }
 
 
 }

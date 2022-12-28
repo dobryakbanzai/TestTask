@@ -1,6 +1,7 @@
 package com.example.testtask
 
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -55,7 +56,7 @@ class MainActivity : AppCompatActivity() {
             println("aaa")
             val strs = binding.coord.text.split(" ").toTypedArray()
             println("=> " + strs[0] + " " + strs[1])
-            val geoLocation = Uri.parse("geo:0,0?q=${strs[0]},${strs[1]}(AA)")
+            val geoLocation = Uri.parse("geo:0,0?q=${strs[0]},${strs[1]}(${binding.cname.text})")
             val intent = Intent(Intent.ACTION_VIEW).apply {
                 data = geoLocation
             }
@@ -67,9 +68,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun getRes(){
 
-        var txtBin = binding.editTextBin.text
+        val txtBin = binding.editTextBin.text
 
         val urlGet = "$URL" +
                     "$txtBin"

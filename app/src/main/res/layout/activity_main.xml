@@ -188,10 +188,10 @@
 
     <TableLayout
         android:id="@+id/tableLayout5"
-        android:layout_width="143dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="161dp"
+        android:layout_height="89dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout4">
 
@@ -214,9 +214,10 @@
 
             <TextView
                 android:id="@+id/emoji"
-                android:layout_width="wrap_content"
+                android:layout_width="92dp"
                 android:layout_height="wrap_content"
-                android:text="null" />
+                android:text="null"
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/cname"
@@ -232,9 +233,10 @@
 
             <TextView
                 android:id="@+id/coord"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="null" />
+                android:layout_width="93dp"
+                android:layout_height="42dp"
+                android:text="null"
+                android:textAlignment="center" />
         </TableRow>
 
     </TableLayout>
